@@ -31,18 +31,27 @@ header nav {
 }
 
 img {
+  
   max-width: 100%;
+  max-height:500px;
 }
 
 div.post {
   margin-bottom: 40px;
   padding-bottom: 20px;
   border-bottom: 1px solid gray;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-div.articleText h2 {
+div.ArticleText h2 {
   font-size: 1.8rem;
+}
+
+div.post div.ArticleText a {
+  text-decoration: none;
+  color: inherit;
 }
 
 div.post p.info {
@@ -51,6 +60,10 @@ div.post p.info {
   font-weight: bold;
   display: flex;
   gap: 5px;
+}
+
+.post {
+  justify-content: center;
 }
 
 
@@ -84,6 +97,35 @@ button {
   padding: 7px 0;
 }
 
-form h1 {
+form.login h1, form.register h1 {
   text-align: center;
+}
+
+div.post-page div.image{
+  max-height: 200px;
+  display: flex;
+  overflow: hidden;
+}
+
+div.post-page div.image img {
+  object-fit: cover;
+  object-position: center center;
+}
+
+div.post-page h1 {
+  text-align: center;
+}
+
+div.post-page time {
+  text-align: center;
+  display: block;
+  font-weight: bold;
+
+}
+
+div.post-page div.author {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
 }
