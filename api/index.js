@@ -16,7 +16,7 @@ dotenv.config();
 const salt = bcrypt.genSaltSync(10);
 const salt2 = 'asw27y8228';
 
-app.use(cors({credentials:true, methods: ["POST", "GET", "PUT"], origin:['https://full-stack-blog-frontend.vercel.app']}));
+app.use(cors({credentials:true, origin:['https://full-stack-blog-frontend.vercel.app']}));
 app.use(express.json());
 app.use(cookieParser());
 app.use('/uploads', express.static(__dirname + '/uploads'));
