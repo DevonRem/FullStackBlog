@@ -20,7 +20,7 @@ export default function PostPage() {
     return(
         <div className="post-page">
             <div className="image">
-                <img src={`http://localhost:4000/${postInfo.cover}`} alt=""/>
+                <img src={`https://full-stack-blog-flax.vercel.app/${postInfo.cover}`} alt=""/>
             </div>
             <h1>{postInfo.title}</h1>
             <time>Post Date: {format(new Date(postInfo.createdAt), 'MMM d, yyyy HH:mm')}</time>
