@@ -129,3 +129,24 @@ div.post-page div.author {
   margin-bottom: 10px;
   font-weight: bold;
 }
+
+div.edit-row {
+  text-align: center;
+}
+
+a.edit-btn {
+  background-color: #555555;
+  display: inline-block;
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 8px;
+  text-decoration: none;;
+}
+
+a {
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}

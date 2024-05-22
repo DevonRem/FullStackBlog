@@ -1,9 +1,11 @@
-import { useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
+import { useContext, useEffect, useState } from "react";
 import {format} from "date-fns";
+import {UserContext} from "../UserContext";
 
 export default function PostPage() {
     const [postInfo, setPostInfo] = useState(null);
+    const {userInfo} = useContext(UserContext);
     const {id} = useParams();
     useEffect(() => {
 
@@ -23,6 +25,11 @@ export default function PostPage() {
             <h1>{postInfo.title}</h1>
             <time>Post Date: {format(new Date(postInfo.createdAt), 'MMM d, yyyy HH:mm')}</time>
             <div className="author">Author: {postInfo.author.username}</div>
+            {userInfo.id === postInfo.author._id && (
+                <div className="edit-row">
+                    <Link className="edit-btn" to={`/edit/${postInfo._id}`}>Edit this post!</Link>
+                </div>
+            )}
             <div dangerouslySetInnerHTML={{__html:postInfo.content}} />
         </div>
     );
