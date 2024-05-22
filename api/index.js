@@ -26,7 +26,7 @@ mongoose.connect(process.env.MONGODB_URI);
 
 app.get("/", (req, res) => {
     res.json("Hello");
-})
+});
 
 
 app.post('/register', async (req, res) => {  
