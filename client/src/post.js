@@ -7,7 +7,7 @@ export default function Post({_id, title, summary, cover, content, createdAt, au
         <div className="post">
         <div className="ArticleImg">
         <Link to={`/post/${_id}`}>
-        <img src={'https://full-stack-blog-flax.vercel.app/'+cover} alt=""></img>
+        <img src={'https://fullstackblog-qane.onrender.com/'+cover} alt=""></img>
         </Link>
 
         </div>

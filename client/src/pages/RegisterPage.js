@@ -6,7 +6,7 @@ export default function RegisterPage() {
 
     async function register(ev) {
         ev.preventDefault();
-        const response = await fetch('https://full-stack-blog-flax.vercel.app/register', {
+        const response = await fetch('https://fullstackblog-qane.onrender.com/register', {
             method: 'POST',
             body: JSON.stringify({username, password}),
             headers: {'Content-Type':'application/json'},

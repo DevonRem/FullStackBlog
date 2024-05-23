@@ -10,7 +10,7 @@ export default function LoginPage() {
 
     async function login(ev){
         ev.preventDefault();
-        const response = await fetch('https://full-stack-blog-flax.vercel.app/login', {
+        const response = await fetch('https://fullstackblog-qane.onrender.com/login', {
             method: 'POST',
             body: JSON.stringify({username, password}),
             headers: {'Content-Type':'application/json'},

@@ -9,7 +9,7 @@ export default function PostPage() {
     const {id} = useParams();
     useEffect(() => {
 
-        fetch(`http://localhost:4000/post/${id}`).then(response => {
+        fetch(`https://fullstackblog-qane.onrender.com/post/${id}`).then(response => {
             response.json().then(postInfo=> {
                 setPostInfo(postInfo);
             });
@@ -20,7 +20,7 @@ export default function PostPage() {
     return(
         <div className="post-page">
             <div className="image">
-                <img src={`https://full-stack-blog-flax.vercel.app/${postInfo.cover}`} alt=""/>
+                <img src={`https://fullstackblog-qane.onrender.com/${postInfo.cover}`} alt=""/>
             </div>
             <h1>{postInfo.title}</h1>
             <time>Post Date: {format(new Date(postInfo.createdAt), 'MMM d, yyyy HH:mm')}</time>

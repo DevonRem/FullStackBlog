@@ -13,7 +13,7 @@ export default function EditPost() {
 
 
     useEffect(() => {
-        fetch('http://localhost:4000/post/'+id).then(response=> {
+        fetch('https://fullstackblog-qane.onrender.com/post/'+id).then(response=> {
             response.json().then(postInfo=>{
                 setTitle(postInfo.title);
                 setContent(postInfo.content);
@@ -32,7 +32,7 @@ export default function EditPost() {
         if(files?.[0]) {
             data.set('file', files?.[0]);
         }
-        const response = await fetch('https://full-stack-blog-flax.vercel.app/post', {
+        const response = await fetch('https://fullstackblog-qane.onrender.com/post', {
             method: 'PUT',
             body: data,
             credentials: 'include',
