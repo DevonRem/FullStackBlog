@@ -4,7 +4,7 @@ import Post from '../post';
 export default function IndexPage() {
     const [posts, setPosts] = useState([]);
     useEffect(() => {
-        fetch('https://full-stack-blog-flax.vercel.app/post').then(response=>{
+        fetch('https://fullstackblog-qane.onrender.com/post').then(response=>{
             response.json().then(posts=>{
                 setPosts(posts);
             });
