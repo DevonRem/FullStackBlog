@@ -32,7 +32,7 @@ app.use('/uploads', express.static(__dirname + '/uploads'));
 mongoose.connect(process.env.MONGODB_URI);
 
 app.get("/", (req, res) => {
-    res.json("Hello2");
+    res.json("Database is currently running");
 });
 
 
