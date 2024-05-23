@@ -18,7 +18,7 @@ const salt2 = 'asw27y8228';
 
 const corsConfig = {
     credentials:true, 
-    origin:['https://fullstackblog-qane.onrender.com'],
+    origin:['https://full-stack-blog-frontend.vercel.app/'],
     methods: ["GET", "POST", "PUT"],
 };
 
