@@ -32,7 +32,7 @@ app.use('/uploads', express.static(__dirname + '/uploads'));
 mongoose.connect(process.env.MONGODB_URI);
 
 app.get("/", (req, res) => {
-    res.json("Database is currently running");
+    res.json("Database is now running, link to frontend: https://full-stack-blog-frontend.vercel.app/");
 });
 
 
